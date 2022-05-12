@@ -1,4 +1,5 @@
 name: Complex workflow
+on: push
 jobs:
   ubuntu:
     name: See date on Ubuntu
