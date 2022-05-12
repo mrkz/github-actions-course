@@ -1,0 +1,19 @@
+name: Complex workflow
+jobs:
+  ubuntu:
+    name: See date on Ubuntu
+    runs-on: ubuntu-latest
+    run: date
+  windows:
+    name: See date on Windows
+    runs-on: windows-latest
+    run: date
+  macos:
+    name: See date on MacOS
+    runs-on: macos-latest
+    run: date
+  end:
+    name: See environment on dependent job
+    runs-on: ubuntu-latest
+    run: env
+    needs: [ubuntu, windows, macos]
